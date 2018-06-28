@@ -10,3 +10,6 @@ Just type `python FizzBuzz.py` in the terminal :)
 
 ## Result
 Only get about 93% accuracy on test set :(
+
+## Story
+You can find the Fizz-Buzz story [here](http://joelgrus.com/2016/05/23/fizz-buzz-in-tensorflow/) and the author's code [here](https://github.com/joelgrus/fizz-buzz-tensorflow). Hope you can enjoy it.
