@@ -1,6 +1,6 @@
 # Solving Fizz Buzz using pytorch
 
-## dependencies
+## Dependencies
 - pytoch  
 - numpy  
 using `pip` to install what you need.
