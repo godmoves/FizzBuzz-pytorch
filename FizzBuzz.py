@@ -7,7 +7,7 @@ import torch.utils.data as Data
 # hyperparameters
 HIDDEN_UNITS = 1000
 LEARNING_RATE = 0.001
-EPOCH = 250
+EPOCH = 300
 BATCH_SIZE = 15
 
 
@@ -30,13 +30,7 @@ class DNN(nn.Module):
 #   lower bit --------> higher bit
 #   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 def encode_data(x):
-    code = np.zeros(10)
-    x_bin = list(bin(x))[::-1]
-    x_len = len(x_bin) - 2
-    for i in range(10):
-        if i < x_len:
-            code[i] = float(x_bin[i])
-
+    code = np.array([x >> d & 1 for d in range(10)])
     return code
 
 
@@ -46,11 +40,11 @@ def encode_data(x):
 #   2 -- Buzz     (can be divided by 5 but not 3)
 #   3 -- FizzBuzz (can be divided by 3 and 5)
 def encode_label(x):
-    if (x % 3 == 0 and x % 5 == 0):
+    if (x % 15 == 0):
         return 3
-    elif (x % 3 != 0 and x % 5 == 0):
+    elif (x % 5 == 0):
         return 2
-    elif (x % 3 == 0 and x % 5 != 0):
+    elif (x % 3 == 0):
         return 1
     else:
         return 0
