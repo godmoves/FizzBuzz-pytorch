@@ -3,6 +3,7 @@
 ## Dependencies
 - pytoch  
 - numpy  
+
 using `pip` to install what you need.
 
 ## Usage
