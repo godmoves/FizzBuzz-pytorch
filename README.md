@@ -1,10 +1,10 @@
 # Solving Fizz Buzz using pytorch
 
 ## Dependencies
-- pytoch  
+- pytorch  
 - numpy  
 
-using `pip` to install what you need.
+Use `pip` to install what you need. Find more info about PyTorch [here](https://pytorch.org/tutorials/index.html).
 
 ## Usage
 Just type `python FizzBuzz.py` in the terminal :)
